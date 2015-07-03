@@ -1,0 +1,10 @@
+*.o
+*.map
+*.cproject
+*.project
+
+src_NormalMode/*.eep
+src_NormalMode/*.elf
+src_NormalMode/*.hex
+src_NormalMode/*.lss
+
