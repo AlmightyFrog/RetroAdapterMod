@@ -45,7 +45,7 @@ char usbDescriptorConfiguration[] = {    /* USB configuration descriptor */
 
 /* ----- USB Device Descriptor ----------------------------------------------------------------- */
 
-PROGMEM char usbDescriptorDeviceJoystick[] = {    /* USB device descriptor */
+const PROGMEM char usbDescriptorDeviceJoystick[] = {    /* USB device descriptor */
     18,         /* sizeof(usbDescriptorDevice): length of descriptor in bytes */
     USBDESCR_DEVICE,        /* descriptor type */
     0x10, 0x01,             /* USB version supported */
@@ -65,7 +65,7 @@ PROGMEM char usbDescriptorDeviceJoystick[] = {    /* USB device descriptor */
     1,          /* number of configurations */
 };
 
-PROGMEM char usbDescriptorDeviceMouse[] = {    /* USB device descriptor */
+const PROGMEM char usbDescriptorDeviceMouse[] = {    /* USB device descriptor */
     18,         /* sizeof(usbDescriptorDevice): length of descriptor in bytes */
     USBDESCR_DEVICE,        /* descriptor type */
     0x10, 0x01,             /* USB version supported */
@@ -91,7 +91,7 @@ PROGMEM char usbDescriptorDeviceMouse[] = {    /* USB device descriptor */
 
 #define	usbHidReportDescriptor1PLength	80
 
-PROGMEM char usbHidReportDescriptor1P[80] = {
+const PROGMEM char usbHidReportDescriptor1P[80] = {
 	0x05,0x01,		//Usage_Page (Generic Desktop)
 	0x09,0x04,		//Usage (Joystick)
 // 4
@@ -156,7 +156,7 @@ PROGMEM char usbHidReportDescriptor1P[80] = {
 
 #define	usbHidReportDescriptor2PLength	160
 
-PROGMEM char usbHidReportDescriptor2P[160] = {
+const PROGMEM char usbHidReportDescriptor2P[160] = {
 
 	/* ----- Player 1 ----- */
 
@@ -272,7 +272,7 @@ PROGMEM char usbHidReportDescriptor2P[160] = {
 
 #define	usbHidReportDescriptorMouseLength	100
 
-PROGMEM char usbHidReportDescriptorMouse[100] = {
+const PROGMEM char usbHidReportDescriptorMouse[100] = {
     0x05, 0x01,			// USAGE_PAGE (Generic Desktop)
     0x09, 0x02,			// USAGE (Mouse)
     0xa1, 0x01,			// COLLECTION (Application)
@@ -338,7 +338,7 @@ PROGMEM char usbHidReportDescriptorMouse[100] = {
 
 #define	usbHidReportDescriptorWheelLength	85
 
-PROGMEM char usbHidReportDescriptorWheel[85] = {
+const PROGMEM char usbHidReportDescriptorWheel[85] = {
 	0x05,0x01,		//Usage_Page (Generic Desktop)
 	0x09,0x04,		//Usage (Joystick)
 // 4
@@ -403,7 +403,7 @@ PROGMEM char usbHidReportDescriptorWheel[85] = {
 
 #define	usbHidReportDescriptorAnalogButtonsLength	117
 
-PROGMEM char usbHidReportDescriptorAnalogButtons[117] = {
+const PROGMEM char usbHidReportDescriptorAnalogButtons[117] = {
 	0x05,0x01,		//Usage_Page (Generic Desktop)
 	0x09,0x04,		//Usage (Joystick)
 // 4
