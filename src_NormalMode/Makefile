@@ -6,7 +6,7 @@
 PROJECT = RetroAdapterV2
 MCU = atmega168
 TARGET = RetroAdapterV2.elf
-CC = avr-gcc.exe
+CC = avr-gcc
 
 ## Options common to compile, link and assembly rules
 COMMON = -mmcu=$(MCU)
