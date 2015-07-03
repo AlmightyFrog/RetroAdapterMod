@@ -99,7 +99,14 @@ readn64:
 		mov		data4, data8
 
 		st		Z, data3		; x
-		neg		data4			; for some reason y is inverted
+
+		; special handling for y axis, reduce possible area from -128..127 to -127..127 as easy fix
+		; using ones complement does not solve problem, as then everythin (including 0) would be offset -1
+		cpi		data4, 0x80		; check if -128
+		brne	jumpyincrement	; jump over if number different -128
+		inc		data4 			; +1 so that -128 gets to -127
+jumpyincrement:
+		neg data4 				; invert data using twos complement
 		std		Z+1, data4		; y
 
 		; data3 - b1
